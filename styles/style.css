@@ -1,3 +1,4 @@
+/* Reset */
 *,
 *::after,
 *::before {
@@ -6,9 +7,75 @@
   box-sizing: border-box;
 }
 
+/* Fonts */
+@font-face {
+  font-family: 'Poppins Medium';
+  src: url('../fonts/Poppins-Medium.woff') format('woff2'),
+    url('../fonts/Poppins-Medium.woff2') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Poppins Bold';
+  src: url('../fonts/Poppins-Bold.woff') format('woff2'),
+    url('../fonts/Poppins-Bold.woff2') format('woff');
+  font-weight: 700;
+}
+
+/* General styles */
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: 'Poppins Medium', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.link {
+  font-family: 'Poppins Bold', sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 60px;
+  margin: 0 0 1.25rem 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  height: 54px;
+  padding: 1rem 3.7rem;
+  background: linear-gradient(178.18deg, #fd749b -13.56%, #281ac8 158.3%);
+  border-radius: 100px;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: 'Poppins Bold', sans-serif;
+  cursor: pointer;
+}
+
 .wrapper {
   max-width: 1310px;
   margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 ul {
@@ -19,7 +86,7 @@ ul {
 
 /* Header */
 .header {
-  padding: 2rem 0;
+  padding: 2.5rem 0 2.4rem;
 }
 
 .header .wrapper {
@@ -33,6 +100,66 @@ ul {
 }
 
 .header__menu--item .link {
-  padding: 0.5rem 1rem;
+  position: relative;
+  padding: 0.5rem 0;
+  color: #333;
+  font-size: 14px;
+  line-height: 21px;
   text-decoration: none;
+}
+
+.header__menu--item .link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: #f53e6a;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.header__menu--item .link:hover::after {
+  width: 33%;
+}
+
+.header__menu--item:not(:last-child) {
+  margin-right: 4.25rem;
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  background: linear-gradient(174.48deg, #fd749b -12.41%, #281ac8 88.56%);
+}
+
+.banner__wrapper {
+  display: flex;
+  align-items: center;
+  padding: 5rem 1rem 4rem;
+}
+
+.banner__text {
+  padding-right: clamp(4rem, 8.75rem, 10vw);
+  color: #fff;
+}
+
+.banner__text span {
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.banner__text p {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.banner__wave {
+  position: relative;
+  top: 3rem;
 }
