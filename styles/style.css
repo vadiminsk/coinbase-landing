@@ -119,6 +119,18 @@ ul {
   padding: 6.25rem 0 7.2rem;
 }
 
+.paragraph-center .container > p {
+  width: clamp(40ch, 45%, 70ch);
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 2.5;
+  text-align: center;
+}
+
+.main {
+  padding-bottom: 8.125rem;
+}
+
 /* Header */
 .header {
   padding: 2.5rem 0 2.4rem;
@@ -336,14 +348,6 @@ ul {
 }
 
 /* Team */
-.team .container > p {
-  width: clamp(40ch, 45%, 70ch);
-  margin: 0 auto;
-  font-size: 1rem;
-  line-height: 2.5;
-  text-align: center;
-}
-
 .team .items {
   display: flex;
   justify-content: space-between;
@@ -391,4 +395,33 @@ ul {
 .team .item__content > p:first-child {
   margin-bottom: 0.2rem;
   font-family: 'Poppins Bold', sans-serif;
+}
+
+/* Subscribe */
+.subscribe__form {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.44rem;
+}
+
+.subscribe__form--input {
+  padding: 1rem 1.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  background-image: linear-gradient(white, white),
+    linear-gradient(#fd749b, #281ac8);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  text-transform: uppercase;
+}
+
+.subscribe__form--input::placeholder {
+  color: #333;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.subscribe__form .btn {
+  text-transform: uppercase;
 }
