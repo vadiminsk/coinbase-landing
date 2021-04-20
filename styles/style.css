@@ -425,3 +425,22 @@ ul {
 .subscribe__form .btn {
   text-transform: uppercase;
 }
+
+/* Footer */
+.footer {
+  padding: 1rem;
+  background-color: #151515;
+}
+
+.footer .wrapper {
+  max-width: 1370px;
+  padding: 4.31rem 1rem 0;
+}
+
+.footer .item {
+  color: #fff;
+}
+
+.footer__content {
+  display: flex;
+}
