@@ -131,6 +131,17 @@ ul {
   padding-bottom: 8.125rem;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 /* Header */
 .header {
   padding: 2.5rem 0 2.4rem;
@@ -428,7 +439,6 @@ ul {
 
 /* Footer */
 .footer {
-  padding: 1rem;
   background-color: #151515;
 }
 
@@ -438,9 +448,99 @@ ul {
 }
 
 .footer .item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
   color: #fff;
+}
+
+.footer .item:not(:last-child) {
+  margin-right: 4rem;
+}
+
+.footer .item:first-of-type {
+  flex-grow: 2;
+  margin-right: clamp(4rem, 9vw, 9rem);
+}
+
+.footer .item:last-of-type {
+  flex-grow: 2;
+}
+
+.footer .item:nth-of-type(3) {
+  margin-right: clamp(4rem, 9vw, 9rem);
+}
+
+.footer .item:nth-of-type(3) > a {
+  margin-top: auto;
+}
+
+.footer .item p,
+.footer .item li,
+.footer .item a,
+.footer .item li > a {
+  font-size: 0.875rem;
+  line-height: 1.71;
+  color: #a2a2a2;
+  text-decoration: none;
 }
 
 .footer__content {
   display: flex;
+}
+
+.footer .item__social {
+  margin-top: auto;
+}
+
+.footer .item__social a:not(:last-child) {
+  margin-right: 1.125rem;
+}
+
+.footer .item__header {
+  margin-bottom: 1.875rem;
+  font-size: 1.125rem;
+  line-height: 1.67;
+}
+
+.footer .item__images {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer .item__images > li {
+  position: relative;
+  height: 4.375rem;
+  width: 4.375rem;
+  margin: 0 0.625rem 0.625rem 0;
+  background-color: #c4c4c4;
+}
+
+.footer .item__images > li::before {
+  content: '\002B';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.875rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.footer .item__images > li:hover {
+  background-color: #d8d8d8;
+}
+
+.footer .item__images > li:hover::before {
+  opacity: 1;
+}
+
+.footer__copyright h5 {
+  padding: 1rem 0;
+  font-size: 0.75rem;
+  line-height: 2;
+  color: #989898;
 }
