@@ -10,7 +10,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="wrapper">
+      <div id="header-wrapper" class="wrapper">
         <div class="header__logo">
           <img src="./images/logo.svg" alt="CoinBase logo" />
         </div>
@@ -30,14 +30,19 @@
             </li>
           </ul>
         </nav>
+        <div id="header-burger" class="header__burger">
+          <img
+            class="header__burger--open"
+            src="./images/menu.svg"
+            alt="Open menu"
+          />
+          <img
+            class="header__burger--close"
+            src="./images/close.svg"
+            alt="Close menu"
+          />
+        </div>
         <div class="header__login">
-          <!-- <form action="" class="header__form">
-            <label for="value-picker-select">Sell Bitcoin/ Giftcard</label>
-            <select name="value-picker-select" id="value-picker-select">
-              <option value="sell bitcoin" selected>Sell Bitcoin</option>
-              <option value="giftcard">Giftcard</option>
-            </select>
-          </form> -->
           <button class="header__login--button btn">Login</button>
         </div>
       </div>
@@ -311,5 +316,7 @@
         </section>
       </div>
     </footer>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
